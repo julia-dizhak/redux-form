@@ -1,6 +1,6 @@
 # redux-form
 
-## Transaltions
+## Translations
 reducer - преобразователь
 
 ## Overview
