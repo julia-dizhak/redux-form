@@ -17,3 +17,17 @@ function that takes configuration object and returns a new function; use it to w
 
 <Field /> -
 component that lives inside your wrapped form component; use it to connect the input components to the redux-form logic;
+
+
+### Examples
+
+#### Simple (Contact) Form
+The simplest form. Demonstrates how to attach standard inputs to Redux.
+
+#### Synchronous Validation
+How to add synchronous client-side validation to your form.
+There are two ways to provide synchronous client-side validation to your form.
+
+The first is to provide redux-form with a validation function that takes an object of form values and returns an object of errors. This is done by providing the validation function to the decorator as a config parameter, or to the decorated form component as a prop.
+
+The second is to use individual validators for each field. See Field-Level Validation Example.

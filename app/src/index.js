@@ -10,6 +10,10 @@ import registerServiceWorker from './registerServiceWorker';
 
 //import FormContainer from './simple-form/FormContainer';
 import ContactForm from './simple-form/Form';
+
+//import SyncValidationForm from './sync-validation/SyncFormContainer';
+import SyncValidationForm from './sync-validation/SyncForm';
+
 import showResults from './utils/showResults';
 
 const rootReducer = combineReducers({
@@ -18,10 +22,6 @@ const rootReducer = combineReducers({
     // for custom keys look up the docs for 'getFormState'
     form: formReducer
 });
-
-//const compose = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || reduxCompose;
-
-//const store = createStore(rootReducer);
 
 const store = (window.devToolsExtension
     ? window.devToolsExtension()(createStore)
@@ -37,10 +37,16 @@ const onSubmit = (data) => {
 render(
     <Provider store={store}>
 
-        <div className="wrap" style={{ padding: 15 }}>
+        {/* <div className="wrap" style={{ padding: 15 }}>
             <h2>Simple Form</h2>
             <ContactForm onSubmit={showResults} />
             <Values form="contact-form" />
+        </div> */}
+
+        <div className="wrap" style={{ padding: 15 }}>
+            <h2>Synchronous Validation Form</h2>
+            <SyncValidationForm onSubmit={showResults} />
+            <Values form="sync-validation-form" />
         </div>
 
         {/* <div>

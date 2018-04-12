@@ -5,7 +5,7 @@ import { reduxForm } from 'redux-form';
 //     console.log(data)
 // }
 
-const ContactForm = props => {
+function ContactForm(props) {
     const { handleSubmit, pristine, reset, submitting } = props;
 
     return (
